@@ -8,11 +8,11 @@ The main script in this repository, `analysis.R`:
 1. Downloads and unzips the data.
 2. Merges the measurements from the training and test datasets (which were originally randomly partitioned).
 3. Selects only the mean and standard deviation measurements (for each axis, also includes meanFrequency measurements).
-4. Adds corresponding subject and activity labels to each entry.
-5. Creates a new data frame, `dat_ms` where only the mean of these measurements, after grouping by subject and activity, is recorded.
+4. Adds corresponding subject and activity labels to each entry. All of these measurements are stored in a data frame called `dat_ms`.
+5. Creates a new data frame, `tidy_dat` where only the mean of these measurements, after grouping by subject and activity, is recorded.
 6. Writes this data frame to a tab-delimited text file called `tidy_dat.txt`. `tidy_dat.txt` can be read into R as follows: `tidy_dat <- read.table("tidy_dat.txt", header=TRUE, sep="\t", row.names=TRUE)`.
 
-The variables of `dat_ms`, and of the data in `tidy_dat.txt` are described as follows (some descriptions come from the original code book, stored in `UCI HAR Dataset/features_info.txt`):
+The variables of `dat_ms` (10299 measurements for 81 features), and of the data in `tidy_dat.txt` (180 mean measurements for 81 features) are described as follows (some descriptions come from the original code book, stored in `UCI HAR Dataset/features_info.txt`):
 - activity_label: one of six discrete activities performed by the subject as measurements were taken. Categorical, values: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 - subject: unique numerical ID for each subject. Discrete integer, values: 1-30
 All of the remaining variables assume continuous numerical values from -1 to 1 (scaled).
