@@ -3,7 +3,7 @@
 This is a code book pertaining to preliminary processing of the Human Activity Recognition Using Smartphones Data Set from the [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 The data are available [in this zip file, downloads upon click.](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) This dataset contains motion information from wearables collected while subjects perform a standardized set of activities.
 
-The main script in this repository, `analysis.R`:
+The main script in this repository, `run_analysis.R`:
 
 1. Downloads and unzips the data.
 2. Merges the measurements from the training and test datasets (which were originally randomly partitioned).
